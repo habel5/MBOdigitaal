@@ -23,10 +23,13 @@ require_once __DOCUMENTROOT__ . '/errors/default.php';
 // 3. CONTROLLER FUNCTIES
 // Hier vinden alle acties plaats die moeten gebeuren om de juiste
 // informatie te bewerken.
-
+//Haal de data op via het model
+require __DOCUMENTROOT__ . '/models/Keuzedelen.php';
+$keuzedelen = keuzedeel::selectAll();
 
 // 4. VIEWS OPHALEN
 // De HTML-pagina (view) wordt hier opgehaald.
 // $title is de titel van de html pagina.
 $title = "Challenges keuzedelen";
 require __DOCUMENTROOT__ . '/views/keuzedelen/challenges.php';
+
